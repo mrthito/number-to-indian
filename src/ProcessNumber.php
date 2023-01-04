@@ -1,139 +1,139 @@
 <?php
 
-namespace Rakibhstu\Banglanumber;
+namespace MrThito\Hindinumber;
 
-use Rakibhstu\Banglanumber\Exceptions\InvalidNumber;
-use Rakibhstu\Banglanumber\Exceptions\InvalidRange;
+use MrThito\Hindinumber\Exceptions\InvalidNumber;
+use MrThito\Hindinumber\Exceptions\InvalidRange;
 
 class ProcessNumber
 {
     protected $words = [
         '',
-        'এক',
-        'দুই',
-        'তিন',
-        'চার',
-        'পাঁচ',
-        'ছয়',
-        'সাত',
-        'আট',
-        'নয়',
-        'দশ',
-        'এগারো',
-        'বারো',
-        'তেরো',
-        'চৌদ্দ',
-        'পনেরো',
-        'ষোল',
-        'সতেরো',
-        'আঠারো',
-        'উনিশ',
-        'বিশ',
-        'একুশ',
-        'বাইশ',
-        'তেইশ',
-        'চব্বিশ',
-        'পঁচিশ',
-        'ছাব্বিশ',
-        'সাতাশ',
-        'আঠাশ',
-        'ঊনত্রিশ',
-        'ত্রিশ',
-        'একত্রিশ',
-        'বত্রিশ',
-        'তেত্রিশ',
-        'চৌত্রিশ',
-        'পঁয়ত্রিশ',
-        'ছত্রিশ',
-        'সাঁইত্রিশ',
-        'আটত্রিশ',
-        'ঊনচল্লিশ',
-        'চল্লিশ',
-        'একচল্লিশ',
-        'বিয়াল্লিশ',
-        'তেতাল্লিশ',
-        'চুয়াল্লিশ',
-        'পঁয়তাল্লিশ',
-        'ছেচল্লিশ',
-        'সাতচল্লিশ',
-        'আটচল্লিশ',
-        'ঊনপঞ্চাশ',
-        'পঞ্চাশ',
-        'একান্ন',
-        'বাহান্ন',
-        'তিপ্পান্ন',
-        'চুয়ান্ন',
-        'পঞ্চান্ন',
-        'ছাপ্পান্ন',
-        'সাতান্ন',
-        'আটান্ন',
-        'ঊনষাট',
-        'ষাট',
-        'একষট্টি',
-        'বাষট্টি',
-        'তেষট্টি',
-        'চৌষট্টি',
-        'পঁয়ষট্টি',
-        'ছেষট্টি',
-        'সাতষট্টি',
-        'আটষট্টি',
-        'ঊনসত্তর',
-        'সত্তর',
-        'একাত্তর',
-        'বাহাত্তর',
-        'তিয়াত্তর',
-        'চুয়াত্তর',
-        'পঁচাত্তর',
-        'ছিয়াত্তর',
-        'সাতাত্তর',
-        'আটাত্তর',
-        'ঊনআশি',
-        'আশি',
-        'একাশি',
-        'বিরাশি',
-        'তিরাশি',
-        'চুরাশি',
-        'পঁচাশি',
-        'ছিয়াশি',
-        'সাতাশি',
-        'আটাশি',
-        'ঊননব্বই',
-        'নব্বই',
-        'একানব্বই',
-        'বিরানব্বই',
-        'তিরানব্বই',
-        'চুরানব্বই',
-        'পঁচানব্বই',
-        'ছিয়ানব্বই',
-        'সাতানব্বই',
-        'আটানব্বই',
-        'নিরানব্বই'
+        'एक',
+        'दो',
+        'तीन',
+        'चार',
+        'पंज',
+        'छह',
+        'सात',
+        'आठ',
+        'नहीं',
+        'दस',
+        'ग्यारह',
+        'बारह',
+        'तेरह',
+        'चौदह',
+        'पंद्रह',
+        'सोलह',
+        'सत्रह',
+        'अठारह',
+        'उन्नीस',
+        'बीस',
+        'इक्कीस',
+        'बाईस',
+        'तेईस',
+        'चौबीस',
+        'पच्चीस',
+        'छब्बीस',
+        'सत्ताईस',
+        'अट्ठाईस',
+        'उनतालीस',
+        'तीस',
+        'इकतीस',
+        'बत्तीस',
+        'तैंतीस',
+        'चौंतीस',
+        'पैंतीस',
+        'छत्तीस',
+        'सैंतीस',
+        'अड़तीस',
+        'उनचास',
+        'चालीस',
+        'इकतालीस',
+        'बयालीस',
+        'तैंतालीस',
+        'चवालीस',
+        'पैंतालीस',
+        'छियालीस',
+        'सैंतालीस',
+        'अड़तालीस',
+        'उनसठ',
+        'पचास',
+        'इक्यावन',
+        'बावन',
+        'तिरपन',
+        'चौवन',
+        'पचास',
+        'छप्पन',
+        'सत्तावन',
+        'पचास के करीब',
+        'उनहत्तर',
+        'साठ',
+        'इकसठ',
+        'बासठ',
+        'तिरसठ',
+        'चौंसठ',
+        'पैंसठ',
+        'छियासठ',
+        'सड़सठ',
+        'अड़सठ',
+        'उनहत्तर',
+        'सत्तर',
+        'इकहत्तर',
+        'बहत्तर',
+        'सत्तर-तीस',
+        'चौहत्तर',
+        'पचहत्तर',
+        'छिहत्तर',
+        'सतहत्तर',
+        'अठहत्तर',
+        'नवासी',
+        'अस्सी',
+        'एकशी',
+        'बिराशी',
+        'तिराशी',
+        'चौरासी',
+        'पचासी',
+        'छियासी',
+        'सत्तासी',
+        'अट्ठासी',
+        'निन्यानवे',
+        'नब्बे',
+        'इक्यानबे',
+        'बयान्वे',
+        'तिरानवे',
+        'चौरानवे',
+        'पंचानबे',
+        'छियानबे',
+        'सत्तानवे',
+        'अट्ठानबे',
+        'निन्यानवे'
     ];
 
     protected $bn_num = [
-        'শূন্য',
-        'এক',
-        'দুই',
-        'তিন',
-        'চার',
-        'পাঁচ',
-        'ছয়',
-        'সাত',
-        'আট',
-        'নয়'
+        'शून्य',
+        'एक',
+        'दो',
+        'तीन',
+        'चार',
+        'पंज',
+        'छह',
+        'सात',
+        'आठ',
+        'नहीं'
     ];
 
     protected $numbers = [
-        '০',
-        '১',
-        '২',
-        '৩',
-        '৪',
-        '৫',
-        '৬',
-        '৭',
-        '৮',
-        '৯'
+        '०',
+        '१',
+        '२',
+        '३',
+        '४',
+        '५',
+        '६',
+        '७',
+        '८',
+        '९'
     ];
 
 
@@ -161,7 +161,7 @@ class ProcessNumber
         $valid = $this->isValid($number);
 
         if ($number == 0) {
-            return 'শূন্য';
+            return 'शून्य';
         }
 
         if (is_float($number)) {
@@ -176,14 +176,14 @@ class ProcessNumber
         $this->isValid($number);
 
         if ($number == 0) {
-            return 'শূন্য টাকা';
+            return 'शून्य पैसे';
         }
 
         if (is_float($number)) {
             return $this->convertFloatNumberToMoneyFormat($number);
         }
 
-        return $this->toWord($number) . ' টাকা ';
+        return $this->toWord($number) . ' पैसे ';
     }
 
     public function bnCommaLakh($number)
@@ -201,9 +201,9 @@ class ProcessNumber
         $crore = (int) ($num / 10000000);
         if ($crore != 0) {
             if ($crore > 99) {
-                $text .= $this->bnWord($crore) . ' কোটি ';
+                $text .= $this->bnWord($crore) . ' करोड़ ';
             } else {
-                $text .= $this->words[$crore] . ' কোটি ';
+                $text .= $this->words[$crore] . ' करोड़ ';
             }
         }
 
@@ -211,21 +211,21 @@ class ProcessNumber
 
         $lakh = (int) ($crore_div / 100000);
         if ($lakh > 0) {
-            $text .= $this->words[$lakh] . ' লক্ষ ';
+            $text .= $this->words[$lakh] . ' लाख ';
         }
 
         $lakh_div = $crore_div % 100000;
 
         $thousand = (int) ($lakh_div / 1000);
         if ($thousand > 0) {
-            $text .= $this->words[$thousand] . ' হাজার ';
+            $text .= $this->words[$thousand] . ' हजार ';
         }
 
         $thousand_div = $lakh_div % 1000;
 
         $hundred = (int) ($thousand_div / 100);
         if ($hundred > 0) {
-            $text .= $this->words[$hundred] . ' শত ';
+            $text .= $this->words[$hundred] . ' सौ ';
         }
 
         $hundred_div = (int) ($thousand_div % 100);
@@ -256,7 +256,7 @@ class ProcessNumber
         $decimalPart = explode(".", $number);
         $text = $this->toWord($decimalPart[0]);
         if (isset($decimalPart[1])) {
-            $text .= ' দশমিক ' . $this->toDecimalWord((string)$decimalPart[1]);
+            $text .= ' दशमलव ' . $this->toDecimalWord((string)$decimalPart[1]);
         }
 
         return $text;
@@ -270,9 +270,9 @@ class ProcessNumber
     {
         $money  = number_format((float)$number, 2, '.', '');
         $decimalPart = explode(".", $money);
-        $text = $this->toWord($decimalPart[0]) . ' টাকা ';
+        $text = $this->toWord($decimalPart[0]) . ' पैसे ';
         if (isset($decimalPart[1])) {
-            $text .= $this->words[(int)$decimalPart[1]] . ' পয়সা';
+            $text .= $this->words[(int)$decimalPart[1]] . ' पैसा';
         }
 
         return $text;

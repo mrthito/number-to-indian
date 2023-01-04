@@ -1,38 +1,38 @@
 <?php
 
-namespace Rakibhstu\Banglanumber;
+namespace MrThito\Hindinumber;
 
-use Rakibhstu\Banglanumber\Exceptions\InvalidNumber;
-use Rakibhstu\Banglanumber\Exceptions\InvalidRange;
+use MrThito\Hindinumber\Exceptions\InvalidNumber;
+use MrThito\Hindinumber\Exceptions\InvalidRange;
 
 class ProcessDate
 {
     protected  $bn_month = [
-        '1' => 'জানুয়ারি',
-        '2' => 'ফেব্রুয়ারি',
-        '3' => 'মার্চ',
-        '4' => 'এপ্রিল',
-        '5' => 'মে',
-        '6' => 'জুন',
-        '7' => 'জুলাই',
-        '8' => 'আগস্ট',
-        '9' => 'সেপ্টেম্বর',
-        '10' => 'অক্টোবর',
-        '11' => 'নভেম্বর',
-        '12' => 'ডিসেম্বর'
+        '1' => 'जनवरी',
+        '2' => 'फ़रवरी',
+        '3' => 'मार्च',
+        '4' => 'अप्रैल',
+        '5' => 'मई',
+        '6' => 'जून',
+        '7' => 'जुलाई',
+        '8' => 'अगस्त',
+        '9' => 'सितंबर',
+        '10' => 'अक्टूबर',
+        '11' => 'नवंबर',
+        '12' => 'दिसंबर'
     ];
 
     protected  $numbers = [
-        '০',
-        '১',
-        '২',
-        '৩',
-        '৪',
-        '৫',
-        '৬',
-        '৭',
-        '৮',
-        '৯'
+        '०',
+        '१',
+        '२',
+        '३',
+        '४',
+        '५',
+        '६',
+        '७',
+        '८',
+        '९'
     ];
 
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Rakibhstu\Banglanumber;
+namespace MrThito\Hindinumber;
 
 use Illuminate\Support\ServiceProvider;
-use Rakibhstu\Banglanumber\NumberToBangla;
+use MrThito\Hindinumber\NumberToHindi;
 
-class NumberToBanglaServiceProvider extends ServiceProvider
+class NumberToHindiServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -14,9 +14,9 @@ class NumberToBanglaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(NumberToBangla::class);
+        $this->app->singleton(NumberToHindi::class);
 
-        $this->app->alias(NumberToBangla::class, 'bangla-number');
+        $this->app->alias(NumberToHindi::class, 'hindi-number');
     }
 
     /**

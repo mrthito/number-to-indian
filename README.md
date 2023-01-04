@@ -1,16 +1,16 @@
-## Number to Bangla Number, Word or Month Name in Laravel 
+## Number to Hindi Number, Word or Month Name in Laravel 
 
-![Packagist](https://img.shields.io/packagist/dt/rakibhstu/number-to-bangla)
-[![GitHub stars](https://img.shields.io/github/stars/rakibul-dev/number-to-bangla)](https://github.com/rakibhstu/number-to-bangla/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/rakibul-dev/number-to-bangla)](https://github.com/rakibhstu/number-to-bangla/network)
-[![GitHub issues](https://img.shields.io/github/issues/rakibul-dev/number-to-bangla)](https://github.com/rakibhstu/number-to-bangla/issues)
-[![GitHub license](https://img.shields.io/github/license/rakibul-dev/number-to-bangla)](https://github.com/rakibhstu/number-to-bangla/blob/master/LICENSE)
-[![MadeWithLaravel.com shield](https://madewithlaravel.com/storage/repo-shields/2818-shield.svg)](https://madewithlaravel.com/p/number-to-bangla/shield-link) | [Get Wordpress Plugin](https://wordpress.org/plugins/number-to-bangla/)
+![Packagist](https://img.shields.io/packagist/dt/MrThito/number-to-hindi)
+[![GitHub stars](https://img.shields.io/github/stars/rakibul-dev/number-to-hindi)](https://github.com/MrThito/number-to-hindi/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/rakibul-dev/number-to-hindi)](https://github.com/MrThito/number-to-hindi/network)
+[![GitHub issues](https://img.shields.io/github/issues/rakibul-dev/number-to-hindi)](https://github.com/MrThito/number-to-hindi/issues)
+[![GitHub license](https://img.shields.io/github/license/rakibul-dev/number-to-hindi)](https://github.com/MrThito/number-to-hindi/blob/master/LICENSE)
+[![MadeWithLaravel.com shield](https://madewithlaravel.com/storage/repo-shields/2818-shield.svg)](https://madewithlaravel.com/p/number-to-hindi/shield-link) | [Get Wordpress Plugin](https://wordpress.org/plugins/number-to-hindi/)
 
 
-Laravel package to convert English numbers to Bangla number or Bangla text, Bangla month name and Bangla Money Format for Laravel 5.5+. Maximum possible number to covert in Bangla word is 999999999999999
+Laravel package to convert English numbers to Hindi number or Hindi text, Hindi month name and Hindi Money Format for Laravel 5.5+. Maximum possible number to covert in Hindi word is 999999999999999
 Example,
-| Operation | English Input | Bangla Output |
+| Operation | English Input | Hindi Output |
 | --- | --- | --- |
 | Text (Integer) | 13459 |তেরো হাজার চার শত ঊনষাট|
 | Text (Float) | 1345.05 |এক হাজার তিন শত পঁয়তাল্লিশ দশমিক শূন্য পাঁচ|
@@ -26,7 +26,7 @@ Install the package through [Composer](http://getcomposer.org).
 On the command line:
 
 ```
-composer require rakibhstu/number-to-bangla
+composer require MrThito/number-to-hindi
 
 ```
 
@@ -40,7 +40,7 @@ Add the following to your `providers` array in `config/app.php`:
 'providers' => [
     // ...
 
-    Rakibhstu\Banglanumber\NumberToBanglaServiceProvider::class,
+    MrThito\Hindinumber\NumberToHindiServiceProvider::class,
 ],
 ```
 
@@ -48,18 +48,18 @@ Add the following to your `providers` array in `config/app.php`:
 Here you can see some example of just how simple this package is to use.
 
 ```php
-use Rakibhstu\Banglanumber\NumberToBangla;
+use MrThito\Hindinumber\NumberToHindi;
 
-$numto = new NumberToBangla();
+$numto = new NumberToHindi();
 
-// If you want to convert any number (Integer of Float) into Bangla Word
+// If you want to convert any number (Integer of Float) into Hindi Word
 $text = $numto->bnWord(13459);    // Output:  তেরো হাজার চার শত ঊনষাট
 $text = $numto->bnWord(1345.05);  // Output:  এক হাজার তিন শত পঁয়তাল্লিশ দশমিক শূন্য পাঁচ
 
 
 ```
-### Number to Bangla Word 
-Use `bnWord()` to convert any number into bangla word. Example,
+### Number to Hindi Word 
+Use `bnWord()` to convert any number into hindi word. Example,
 
 ```php
 
@@ -73,8 +73,8 @@ $text = $numto->bnWord(345675.105); // Output: তিন লক্ষ পঁয�
 
 ```
 
-### Number to Bangla Money Format
-Use `bnMoney()` to convert any number into bangla money format with 'টাকা' & 'পয়সা'. Example,
+### Number to Hindi Money Format
+Use `bnMoney()` to convert any number into hindi money format with 'টাকা' & 'পয়সা'. Example,
 
 ```php
 $text = $numto->bnMoney(13459);     // Output:  তেরো হাজার চার শত ঊনষাট টাকা
@@ -83,8 +83,8 @@ $text = $numto->bnMoney(13459.5);   // Output:  তেরো হাজার চ
 
 ```
 
-### Number to Bangla Number
-Use `bnNum()` to convert any number into bangla number. Example,
+### Number to Hindi Number
+Use `bnNum()` to convert any number into hindi number. Example,
 
 ```php
 $text = $numto->bnNum(13459);    // Output:  ১৩৪৫৯
@@ -92,8 +92,8 @@ $text = $numto->bnNum(2334.768); // Output:  ২৩৩৪.৭৬৮
 
 ```
 
-### Number to Month Name in Bangla
-Use `bnMonth()` to convert any number into bangla number. Input Limit (1-12) Example,
+### Number to Month Name in Hindi
+Use `bnMonth()` to convert any number into hindi number. Input Limit (1-12) Example,
 
 ```php
 $text = $numto->bnMonth(1);    // Output:  জানুয়ারি 
@@ -102,7 +102,7 @@ $text = $numto->bnMonth(4);    // Output:  এপ্রিল
 ```
 
 ### Comma separated number
-Use `bnCommaLakh()` to convert any number into bangla number. Example,
+Use `bnCommaLakh()` to convert any number into hindi number. Example,
 
 ```php
 $text = $numto->bnCommaLakh(12121212);    // Output:  ১,২১,২১,২১২
@@ -111,5 +111,5 @@ $text = $numto->bnCommaLakh(12121212);    // Output:  ১,২১,২১,২১�
 
 ## License
 
-Number to Bangla is licensed under [The MIT License (MIT)](LICENSE).
+Number to Hindi is licensed under [The MIT License (MIT)](LICENSE).
 

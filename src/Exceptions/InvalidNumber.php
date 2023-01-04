@@ -1,6 +1,6 @@
 <?php
 
-namespace Rakibhstu\Banglanumber\Exceptions;
+namespace MrThito\Hindinumber\Exceptions;
 
 use Exception;
 

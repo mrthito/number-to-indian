@@ -1,11 +1,11 @@
 <?php
 
-namespace Rakibhstu\Banglanumber;
+namespace MrThito\Hindinumber;
 
-use Rakibhstu\Banglanumber\ProcessNumber;
-use Rakibhstu\Banglanumber\ProcessDate;
+use MrThito\Hindinumber\ProcessNumber;
+use MrThito\Hindinumber\ProcessDate;
 
-class NumberToBangla
+class NumberToHindi
 {
     protected $process;
 
